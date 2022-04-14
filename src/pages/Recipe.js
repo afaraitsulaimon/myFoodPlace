@@ -95,6 +95,6 @@ const Button = styled.button`
     `;
 
     const Info = styled.div`
-         margin-left:10rem;
+         margin-left:5rem;
     `;
 export default Recipe
