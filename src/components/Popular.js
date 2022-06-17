@@ -11,28 +11,28 @@ import { Link } from 'react-router-dom';
 
     const getPopular = async () => {
 
-        {/* we will be storing what we fetch into a local storage*/}
+        /* we will be storing what we fetch into a local storage*/
 
-        {/* first of all check if there is something in the local storage*/}
+        /* first of all check if there is something in the local storage*/
 
         const check = localStorage.getItem('popular');
 
         if (check) {
 
-            {/* if the check is true, which means if there is something in our local storage,
+            /* if the check is true, which means if there is something in our local storage,
             we don't want to fetch again, but just set our state to what is there
             
-        */}
+        */
 
             setPopular(JSON.parse(check));
 
         }else{
 
-              {/* if there is nothing there , then it fetch the api and store it in a local storage
+              /* if there is nothing there , then it fetch the api and store it in a local storage
                 localStorage.setItem  -- this is to set the item in local storage
                 ("popular", --- the popular is the state i want to save in the local storage
                 JSON.stringify(data.recipes));
-            */}
+            */
             const api = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9`)
              const data = await api.json();
 
