@@ -8,7 +8,6 @@ const Cuisine = () => {
 
     const [cuisines, setCuisine] = useState([]);
 
-    {/* the useParams is use to get the parameter of the path we are*/}
     let params = useParams();
     
     const getCuisine = async (name) => {
@@ -20,12 +19,7 @@ const Cuisine = () => {
         setCuisine(recipes.results);
     }
 
-        {/* the useEffect takes a second parameter, which we use it , to say
-        if it gets param.type, then load or Mount, which 
-        the function getCuisine(), also takes the argument 
-        , so that it can pass it to the function parameter and then, pass it to the url
-
-    */}
+        
 
     useEffect(() => {
         
